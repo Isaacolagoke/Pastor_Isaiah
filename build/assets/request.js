@@ -1,15 +1,16 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-    const openForm = document.getElementById("openForm");
+    const openFormButtons = document.querySelectorAll(".openForm"); // Selects all buttons with the same ID
     const closeForm = document.getElementById("closeForm");
     const formOverlay = document.getElementById("formOverlay");
     const prayerForm = document.getElementById("prayerFormOverlay");
     const successMessage = document.getElementById("successMessageOverlay");
 
-    // Open overlay form with blur effect
-    openForm.addEventListener("click", () => {
-        formOverlay.classList.remove("hidden");
-        setTimeout(() => formOverlay.classList.add("opacity-100"), 10);
+    // Loop through each button and add click event
+    openFormButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            formOverlay.classList.remove("hidden");
+            setTimeout(() => formOverlay.classList.add("opacity-100"), 10);
+        });
     });
 
     // Close overlay form
@@ -54,4 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
