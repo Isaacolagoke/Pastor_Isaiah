@@ -1,0 +1,588 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="scrollCue.css">
+</head>
+<body>
+<section class="bg-white flex flex-col h-screen overflow-hidden">
+
+    <header class="absolute inset-x-0 top-0 z-50 w-full">
+        <!-- Nav bar lg screen -->
+        <nav class="flex items-center justify-between p-6 lg:px-8 ">
+            <!-- logo -->
+            <div class="flex lg:flex-1">
+                <span class="sr-only">Pastor Isaiah's logo</span>
+                <img class="h-4 w-auto" src="./assets/logo.png" alt="" srcset="">
+            </div>
+            <!-- lg-menu -->
+            <ul class="hidden lg:flex space-x-6 font-normal font-['Jost'] text-base">
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">About</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Resources</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Events</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Live</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Contact me</a>
+                </li>
+            </ul>
+            <!-- mobile menu toggle -->
+            <div class="flex lg:hidden">
+                <button id="menuButton" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <button id="closeButton" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 hidden">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- mobile menu -->
+        <div id="mobileMenu" class="hidden p-4 bg-white">
+            <ul class="p-4 flex flex-col ring-1 rounded-2xl ring-gray-900/10 space-y-6 font-normal font-['Jost'] text-base">
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">About</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Resources</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Events</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Live</a>
+                </li>
+                <li class="list-none">
+                    <a href="" class="block hover:opacity-80 transition-opacity">Contact me</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <div data-cues="fadeIn" class="flex-1 flex flex-col items-center justify-center px-6 pt-14 lg:px-32 relative isolate">
+        <div class="text-center lg:w-[768px]">
+            <h1 id="bible-verse" class="font-light tracking-tight italic text-balance text-primary leading-8 lg:leading-10 lg:text-[32px] text-[24px] transition-opacity duration-1000 opacity-0">
+                "The Spirit of the LORD is upon Me, Because He has anointed Me To preach the gospel to the poor; He has sent Me to heal the brokenhearted, To proclaim liberty to the captives And recovery of sight to the blind, To set at liberty those who are oppressed; To proclaim the acceptable year of the LORD."
+                Luke 4:18-19
+            </h1>
+        </div>
+
+        <!-- bg gradient -->
+        <div class="absolute inset-x-0 top-[calc(30%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(30%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+
+
+    </div>
+
+    <!-- Scrolling image reel -->
+    <div data-cues="fadeIn" class="px-6 lg:px-32 py-8 -m-4">
+        <div class="scroll-images flex gap-[24px]">
+        <!-- First set of images -->
+        <img src="./assets/images/p-i.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-3.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-4.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-7.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-10.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-14.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-101.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <!-- Duplicate images for seamless loop -->
+        <img src="./assets/images/p-i.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-3.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-4.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-7.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-10.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-14.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        <img src="./assets/images/f-101.jpg" alt="" class="w-[240px] h-[164px] lg:w-[440px] lg:h-[328px] object-cover rounded-2xl">
+        </div>
+    </div>
+
+</section>
+    
+    <!-- Pastor husband Father -->
+<section data-cues="fadeIn" class="py-24 sm:py-32 px-4">
+
+    <div class="mx-auto max-w-7xl flex lg:items-center lg:flex-row flex-col gap-[24px]">
+
+        <div class="basis-1/3 w-full flex flex-col gap-4">
+           
+                <h2 class="text-primary text-5xl font-medium leading-[57.12px] font-['Jost']">
+                    Pastor. Husband Father
+                </h2>
+                <p class="text-primary text-lg font-normal font-['Jost']
+                leading-[21.06px] tracking-tight">
+                    Pastor Isaiah Oyedele is a passionate servant of God, devoted to inspiring and transforming lives through the Word of God. As the visionary leader of Chosen Church Ministries in Leeds, UK, he is committed to empowering individuals to fulfill their divine purpose and fostering a community rooted in faith, love, and service. With a heart for outreach and spiritual growth.
+                </p>
+
+                <button class="bg-white  w-fit px-4 py-2 rounded-2xl text-primary ring-1 hover:ring-0 ring-primary-100 hover:text-white hover:bg-secondary cursor-pointer font-['Jost']">
+                    Learn more about Pastor Isaiah
+                </button>
+        </div>
+
+    <div class="basis-2/3 flex flex-col md:flex-row  gap-4 items-stretch h-[420px]">
+        <div class="w-full overflow-hidden rounded-xl">
+            <img src="./assets/images/f-7.jpg" alt="" class=" h-full w-full object-cover">
+        </div>
+
+        <div class="w-full overflow-hidden rounded-xl">
+            <img src="./assets/images/f-104.jpg" alt="" class=" h-full w-full object-cover">
+        </div>
+
+        <div class="w-full overflow-hidden rounded-xl">
+            <img src="./assets/images/f-101.jpg" alt="" class=" h-full w-full object-cover">
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+<!-- Service Videos -->
+
+<section data-cues="fadeIn" class="py-24 sm:py-32 px-4 overflow-hidden">
+
+    <div class="mx-auto max-w-7xl flex flex-col gap-4">
+
+        <div class="flex justify-between gap-4">
+            <div class="flex flex-col gap-4">
+                <h4 class="font-['Jost'] text-primary text-4xl font-medium leading-[42.12px]">
+                    Service Videos
+                </h4>
+    
+                <p class="text-primary text-lg font-normal leading-[21.06px] tracking-tight">Be Inspired and blessed as you listen to these sermons.</p>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <div class="flex gap-4">
+                <button
+                    id="prev-btn"
+                    class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition h-fit"
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                    >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button
+                    id="next-btn"
+                    class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition h-fit"
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                    >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Video Carousel -->
+        <div id="video-carousel" class="flex gap-4 overflow-x-auto snap-x">
+            <!-- Videos will be dynamically added here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- upcoming events -->
+<section data-cues="fadeIn" class="py-24 sm:py-32 px-4 bg-primary text-white">
+    <div class="mx-auto max-w-7xl flex md:flex-row flex-col gap-4">
+
+        <div class="flex flex-col gap-4 basis-1/3 ">
+            <h4 class="font-['Jost'] text-4xl font-medium leading-[42.12px]">
+                Upcoming Events
+            </h4>
+
+            <p class="text-lg font-normal leading-[21.06px] tracking-tight">Join Pastor Isaiah in any of these
+                events in 2025.</p>
+
+            <!-- Arrow Buttons -->
+            <div class="flex gap-4 text-primary">
+                <button
+                    id="prev-btn"
+                    class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition h-fit"
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                    >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button
+                    id="next-btn"
+                    class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition h-fit"
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                    >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="basis-1/3 flex flex-col gap-4 font-['Jost']">
+            <div class="w-full h-[280px] lg:h-[338px] overflow-hidden rounded-xl">
+                <img src="./assets/images/f-7.jpg" alt="" class=" h-full w-full object-cover">
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="text-lg font-medium leading-[21.06px] tracking-tight">Men’s Monthly Online Prayer</p>
+                <p class="text-secondary text-sm font-normal leading-none tracking-tight">January 25, 2024</p>
+                <p class="text-base font-light leading-[18.72px] tracking-tight">
+                    The Men’s Monthly Online Prayer is a virtual gathering where men come together to seek God in prayer, strengthen their faith, and encourage one another in a supportive and uplifting environment.
+                </p>
+            </div>
+        </div>
+
+        <div class="basis-1/3 flex flex-col gap-4 font-['Jost']">
+            <div class="w-full h-[280px] lg:h-[338px] overflow-hidden rounded-xl">
+                <img src="./assets/images/f-7.jpg" alt="" class=" h-full w-full object-cover">
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="text-lg font-medium leading-[21.06px] tracking-tight">Communion Sunday</p>
+                <p class="text-secondary text-sm font-normal leading-none tracking-tight">January 25, 2024</p>
+                <p class="text-base font-light leading-[18.72px] tracking-tight">
+                    Communion Sunday is a time of worship and reflection, where we come together to partake in the Lord’s Supper, remembering Christ’s sacrifice and celebrating the unity we share in Him.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Support ministry -->
+
+<section data-cues="fadeIn" class="py-24 sm:py-32 px-4 bg-white">
+
+    <div class="mx-auto max-w-5xl flex flex-col gap-8">
+
+        <div class="flex flex-col gap-4 basis-1/3 mx-auto text-center text-primary">
+            <h4 class="font-['Jost'] text-4xl font-medium leading-[42.12px]">
+                Upcoming Events
+            </h4>
+
+            <p class="lg:w-[768px] text-lg font-light leading-[21.06px] tracking-tight text-center">Your support helps us spread God's love and grace. Join us in making a difference through prayer, volunteering, or financial contributions.</p>
+        </div>
+  
+
+        <!-- support cards -->
+        <div class="flex-col md:flex-row flex gap-4 ">
+
+            <!-- partner -->
+            <div class="relative bg-primary rounded-2xl h-[487px] basis-1/2 text-white p-8 flex justify-end flex-col gap-4">
+
+                 <!-- Background Image with Overlay -->
+                <!-- <div class="rounded-2xl absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 transition-opacity duration-500 group-hover:opacity-50 bg-fixed" style="background-image: url('./assets/images/CHOSEN-1.jpg');"></div>
+                <div class="rounded-2xl absolute inset-0 bg-primary opacity-80 transition-opacity duration-500 group-hover:opacity-90"></div> -->
+
+                <h4 class="z-10 font-['Jost'] text-3xl font-medium leading-[42.12px]">
+                    Partner with us
+                </h4>
+    
+                <p class=" z-10 text-lg font-light leading-[21.06px] tracking-tight">Join us in spreading hope, love, and faith. Together, we can make a difference. Partner with us today.</p>
+
+                <button id="openForm" class="z-10 flex gap-2 align bg-center bg-white  w-fit px-4 py-2 rounded-2xl text-primary ring-1 hover:ring-0 ring-primary-100 hover:text-white hover:bg-secondary cursor-pointer font-['Jost']">
+                    Become a partner
+
+                                        <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                    >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            
+           <!-- prayers -->
+            <div class="relative bg-tetiary rounded-2xl h-[487px] basis-1/2 text-white p-8 flex justify-end flex-col gap-4">
+
+                <!-- Background Image with Overlay -->
+                <!-- <div class="rounded-2xl absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 transition-opacity duration-500 group-hover:opacity-50 bg-fixed" style="background-image: url('./assets/images/CHOSEN-1.jpg');"></div>
+                <div class="rounded-2xl absolute inset-0 bg-tetiary opacity-80 transition-opacity duration-500 group-hover:opacity-90"></div> -->
+
+                <h4 class="z-10 font-['Jost'] text-3xl font-medium leading-[42.12px]">
+                    Prayers
+                </h4>
+    
+                <p class="z-10 text-lg font-light leading-[21.06px] tracking-tight">Your prayers support our mission to spread hope, love, and faith. Pray for our leaders, volunteers, and those we serve.</p>
+
+                <button id="openForm" class="z-10 flex gap-2 align bg-center bg-white  w-fit px-4 py-2 rounded-2xl text-primary ring-1 hover:ring-0 ring-primary-100 hover:text-white hover:bg-secondary cursor-pointer font-['Jost']">
+                    Send a message
+
+                                        <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                    >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+    </div>
+
+</section>
+
+<!-- Prayer Support form over lay -->
+
+        <!-- Overlay Form -->
+        <div id="formOverlay" class=" font-['Jost'] fixed inset-0  bg-opacity-90 backdrop-blur-md hidden flex items-center justify-center z-50 transition-opacity duration-300">
+            <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg relative">
+                
+                <!-- Close Button -->
+                <button id="closeForm" class="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-xl">
+                    &times;
+                </button>
+
+                <!-- Form Content -->
+                <h2 class="text-2xl font-semibold text-center text-primary mb-4">Send Pastor Isaiah a message</h2>
+                <p class="text-center text-gray-600 mb-4">Please fill this form to reach Pastor Isaiah.</p>
+
+                <form id="prayerFormOverlay" action="https://formspree.io/f/mqaedygl" method="POST" class="flex flex-col gap-3">
+                    <input type="text" name="Name" placeholder="Your Name" class="p-2 border border-gray-300 rounded-md focus:ring-primary focus:outline-none">
+                    <input type="email" name="Email" placeholder="Your Email" class="p-2 border border-gray-300 rounded-md focus:ring-primary focus:outline-none">
+                    <textarea name="Message" rows="4" placeholder="Your Message" class="p-2 border border-gray-300 rounded-md focus:ring-primary focus:outline-none"></textarea>
+
+                    <button type="submit" class="rounded-2xl bg-primary text-white px-4 py-2 hover:bg-secondary cursor-pointer">
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <p id="successMessageOverlay" class="hidden text-center text-secondary mt-3 opacity-0">
+                    Thank you! Your request has been received. 🙏
+                </p>
+            </div>
+        </div>
+
+<!-- ends -->
+
+<!-- Prayer -->
+<section data-cues="fadeIn" class="py-24 sm:py-32 px-4 relative bg-fixed font-['Jost'] bg-cover bg-no-repeat" style="background-image:url('./assets/images/CHOSEN-1.jpg');">
+
+
+    <div class="mx-auto max-w-7xl p-4 sm:p-6 lg:p-8 rounded-2xl text-white backdrop-blur-lg flex items-center flex-col gap-4 ">
+        <h4 class="font-['Jost'] text-4xl font-medium leading-[42.12px]">
+            Need Prayer?
+        </h4>
+
+        <p class="lg:w-[768px] text-lg font-normal leading-[21.06px] tracking-tight text-center">Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord: and the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him.
+            James 5:14-16</p>
+
+            <form id="prayerForm" action="https://formspree.io/f/mqaedygl" method="POST" class="flex flex-col gap-2 mx-auto lg:w-md w-full">
+                <div class="sm:col-span-2">
+                    <label for="Name" class="block text-lg font-normal text-white">Name</label>
+                    <div class="mt-2.5">
+                        <input type="text" name="Name" id="name" required class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-primary">
+                    </div>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="email" class="block text-lg font-normal text-white">Email</label>
+                    <div class="mt-2.5">
+                        <input type="email" name="email" id="email" required class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-primary">
+                    </div>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block text-lg font-normal text-white">Message</label>
+                    <div class="mt-2.5">
+                        <textarea name="message" id="message" rows="4" required class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-primary"></textarea>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="block w-full rounded-2xl bg-primary px-4 py-2 cursor-pointer text-center text-sm font-medium text-white shadow-xs hover:bg-secondary">Let's talk</button>
+                </div>
+                <!-- Success Message -->
+                <p id="successMessage" class="hidden text-center w-sm text-white text-lg font-medium mt-4">Thank you! Your prayer request has been received. Pastor Isaiah will reach out to you. 🙏</p>
+            </form>
+            
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer data-cues="fadeIn" class="mx-auto max-w-7xl px-4 bg-white font-['Jost']">
+    <div class="py-16 flex flex-col lg:flex-row justify-between gap-4">
+        <div class="flex flex-col gap-4">
+            <img src="./assets/logo.png" alt="" class="h-8 w-fit">
+            <p class="text-gray-800 text-base font-normal leading-[21.06px] tracking-tight">Empowering Lives, Transforming Communities through the Word of God</p>
+            <form id="subscribe-form" class="">
+                <div class="">
+                    <label for="email" class="block text-lg font-normal text-primary">Subscribe to my mailing list</label>
+                    <div class="mt-2.5 flex items-center gap-1">
+                        <input type="email" name="email" id="email" required placeholder="Your email" class="block w-full rounded-2xl bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary">
+            
+                        <!-- Submit Button -->
+                        <div class="">
+                            <button type="submit" class="block w-full rounded-2xl bg-primary px-4 py-2 cursor-pointer text-center text-sm font-medium text-white shadow-xs hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            <!-- Success Message -->
+            <p id="success-message" class="hidden text-center text-primary mt-3 opacity-0">
+                ✅ Thank you! You've been added to the list.
+            </p>
+        </div>
+
+        <!-- footer links -->
+        <ul class="lg:flex space-x-6 font-normal text-lg text-primary">
+            <li class="list-none">
+                <a href="" class="block hover:opacity-80 transition-opacity">About</a>
+            </li>
+            <li class="list-none">
+                <a href="" class="block hover:opacity-80 transition-opacity">Resources</a>
+            </li>
+            <li class="list-none">
+                <a href="" class="block hover:opacity-80 transition-opacity">Events</a>
+            </li>
+            <li class="list-none">
+                <a href="" class="block hover:opacity-80 transition-opacity">Live</a>
+            </li>
+            <li class="list-none">
+                <a href="" class="block hover:opacity-80 transition-opacity">Contact me</a>
+            </li>
+        </ul>
+
+    </div>
+</footer>
+
+<script src="scrollCue.min.js"></script>
+<script>scrollCue.init({
+    duration : 700,
+interval : 100,
+percentage : 0.8
+});</script>
+<script src="./assets/verses.js"></script>
+<script src="./assets/form.js"></script>
+<script src="./assets/request.js"></script>
+<script src="./assets/emailsub.js"></script>
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const closeButton = document.getElementById('closeButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuButton.addEventListener('click', () => {
+        menuButton.classList.add('hidden');
+        closeButton.classList.remove('hidden');
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeButton.addEventListener('click', () => {
+        menuButton.classList.remove('hidden');
+        closeButton.classList.add('hidden');
+        mobileMenu.classList.add('hidden');
+    });
+
+
+    // Video Carousel
+
+  const videoCarousel = document.getElementById("video-carousel");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+
+  // Sample YouTube playlist ID or channel ID
+  const playlistId = "PLzV7PU-Fz9Ouj6BBZt7O-LKKGby3mdFEd"; // Replace with your playlist ID
+  const apiKey = "YOUR_YOUTUBE_API_KEY"; // Replace with your YouTube Data API key
+
+  // Fetch videos from the YouTube Data API
+  async function loadVideos() {
+    const response = await fetch(
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=10&key=${apiKey}`
+    );
+    const data = await response.json();
+
+    // Clear the carousel
+    videoCarousel.innerHTML = "";
+
+    // Populate the carousel with videos
+    data.items.forEach((item) => {
+      const videoId = item.snippet.resourceId.videoId;
+      const videoTitle = item.snippet.title;
+      const thumbnail = item.snippet.thumbnails.medium.url;
+
+      const videoCard = `
+        <a
+          href="https://www.youtube.com/watch?v=${videoId}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-shrink-0 w-80 snap-start"
+        >
+          <div class="h-[200px] w-full rounded-xl overflow-hidden shadow-md">
+            <img
+              src="${thumbnail}"
+              alt="${videoTitle}"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <p class="mt-2 text-center text-gray-800 font-['Jost'] text-sm">${videoTitle}</p>
+        </a>
+      `;
+      videoCarousel.insertAdjacentHTML("beforeend", videoCard);
+    });
+  }
+
+  // Scroll functionality
+  prevBtn.addEventListener("click", () => {
+    videoCarousel.scrollBy({ left: -300, behavior: "smooth" });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    videoCarousel.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+  // Load videos on page load
+  loadVideos();
+</script>
+</body>
+</html>
